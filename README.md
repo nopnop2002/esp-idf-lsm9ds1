@@ -34,11 +34,15 @@ LSM9DS1 3D accelerometer, 3D gyroscope, 3D magnetometer Measurement Sensors.
 |CSM|--|3.3V|3.3V|3.3V|Use i2c|
 |CSAG|--|3.3V|3.3V|3.3V|Use i2c|
 |SDOM|--|GND/3.3V|GND/3.3V|GND/3.3V|(*2)|
-|SDOAG|--|GND/3.3V|GND/3.3V|GND/3.3V|(*2)|
+|SDOAG|--|GND/3.3V|GND/3.3V|GND/3.3V|(*3)|
 
 (*1)You can change it to any pin using menuconfig.   
 
-(*2)I2C address selection.   
+(*2)Magnetometer I2C address selection.   
+GND:i2c address is 0x1C.   
+3.3V:i2c address is 0x1E.   
+
+(*3)Accelerometer/Gyroscope I2C address selection.   
 GND:i2c address is 0x6A.   
 3.3V:i2c address is 0x6B.   
 
@@ -49,17 +53,18 @@ We can find the sensor using [i2c-tools](https://github.com/espressif/esp-idf/tr
 ![Image](https://github.com/user-attachments/assets/5a5d46fd-ce1e-4199-acf4-c6b49abc2dd8)
 
 - Detect senser.   
-The i2c address for magnetometer is 0x1c or 0x1d.   
-The i2c address for accelerometer/gyroscope is 0x6a or 0x6b.   
-![Image](https://github.com/user-attachments/assets/3d9fd3ff-86b3-4464-bf67-904091cfafe8)
+The i2c address for Magnetometer is 0x1C or 0x1E.   
+The i2c address for Accelerometer/Gyroscope is 0x6A or 0x6B.   
+![Image](https://github.com/user-attachments/assets/3d9fd3ff-86b3-4464-bf67-904091cfafe8)   
+![Image](https://github.com/user-attachments/assets/e5e8f291-aec7-43dc-96d2-01a6b4389491)   
 
 - Read register.   
-Register 0x0f for magnetometer is 0x3d.
-Register 0x0f for accelerometer/gyroscope is 0x68.
+Register 0x0f for Magnetometer is 0x3D.   
+Register 0x0f for Accelerometer/Gyroscope is 0x68.   
 ![Image](https://github.com/user-attachments/assets/01313234-87c2-4529-8367-41191254ba47)
 
 # Get Compass offset from IMU
-Use Calibrate to find the compass offset.   
+Use [Calibrate](https://github.com/nopnop2002/esp-idf-lsm9ds1/tree/main/Calibrate) to find the compass offset.   
 
 # Get Euler angles from IMU using Kalman filter
 ```
