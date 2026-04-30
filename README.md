@@ -76,8 +76,8 @@ idf.py flash
 ```
 
 ### Configuration
-![Image](https://github.com/user-attachments/assets/4913fb7e-7625-440e-8c71-b5991fac6550)
-![Image](https://github.com/user-attachments/assets/b89beab6-f91b-4201-a5c3-225d69868737)
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/1093c263-1dba-4ca6-bd5b-4310db91f322" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/5d9fa0d1-c128-4d61-ace4-379c64953647" />
 
 # Get Euler angles from IMU using Madgwick filter
 ```
@@ -89,8 +89,8 @@ idf.py flash
 ```
 
 ### Configuration
-![Image](https://github.com/user-attachments/assets/4913fb7e-7625-440e-8c71-b5991fac6550)
-![Image](https://github.com/user-attachments/assets/b89beab6-f91b-4201-a5c3-225d69868737)
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/8a94747d-ae8b-4c89-9ca4-889542f82fed" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/752c16e4-bca6-4c3a-973f-ffb5db0333ca" />
 
 # View Euler angles with built-in web server   
 ESP32 acts as a web server.   
